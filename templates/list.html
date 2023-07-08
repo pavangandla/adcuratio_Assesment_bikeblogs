@@ -1,0 +1,34 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Insert</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+
+    h5
+    {
+        background-color: red;
+    }
+</style>
+
+<br> <br>
+<div class="container mt-3">
+    <div class="row">
+        {% for i in data %}
+        <div class="col-md-4">
+            <div class="card" style="width:27rem; height:47rem;">
+                <div class="card-header">
+                    <img src="{{i.BIMAGE}}" alt="" width="250px" height="200px">
+                </div>
+                <div class="card-body">
+                    <a href="{{i.BID}}"><h3 class="card-title text-danger">{{i.BNAME}}</h3></a>
+                    <h3>{{i.DESCRIPTION}}</h3>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+   </div>
+</div>
+  {% endblock %}

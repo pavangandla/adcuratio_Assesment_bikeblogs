@@ -1,0 +1,49 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Insert</title>
+<style>
+    form
+    {
+        background-color: rgb(255, 208, 208);
+        height: 250px;
+        width: 300px;
+        padding:5px;
+        border-radius: 0px 10px 0px 10px;
+        opacity: 70%;
+
+
+    }
+    label
+    {
+        color: black;
+    }
+
+    h1
+   {
+    background: lavenderblush;
+    color: black;
+    margin-top: 10px;
+   }
+
+</style>
+{% endblock %}
+
+
+{% block body_block %}
+    <center>
+        
+        <br><br>
+
+        <form action="" method="POST">
+            <h1>Login here</h1>
+            {% csrf_token %}
+            <label for="username">username</label>
+            <input type="text" name="username" id="username"><br><br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <br><br>
+            <input type="submit" value="Login" class="btn btn-primary">
+        </form>
+    </center>
+{% endblock %}
